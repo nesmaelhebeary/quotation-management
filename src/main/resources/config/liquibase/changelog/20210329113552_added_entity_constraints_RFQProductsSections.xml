@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity RFQProductsSections.
+    -->
+    <changeSet id="20210329113552-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="rfqproducts_id"
+                                 baseTableName="rfq_products_sections"
+                                 constraintName="fk_rfq_products_sections__rfqproducts_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rfq_products"/>
+
+    </changeSet>
+</databaseChangeLog>

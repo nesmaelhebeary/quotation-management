@@ -1,0 +1,99 @@
+{
+  "name": "RequestForQuotation",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brokerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RFQStatus",
+      "fieldValues": "New,Rejected,InProgress"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "insuredNames",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "additionalInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "benificiaryName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "policyType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numberOfMonth",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "additionalInfo",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQClaims",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQClaims"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQDocuments",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQDocuments"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQProducts"
+    }
+  ],
+  "entityTableName": "request_for_quotation",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210329113548"
+}

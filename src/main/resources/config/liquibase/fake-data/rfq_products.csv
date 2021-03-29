@@ -1,0 +1,11 @@
+id;rfq_id;product_id;cover_type;sum_insured
+1;35156;64997;Closed;145
+2;6424;50390;OpenCover;71380
+3;89599;36217;OpenCover;6368
+4;79899;89898;Closed;7338
+5;51764;31341;OpenCover;4941
+6;4499;109;OpenCover;37801
+7;61240;75704;Closed;50461
+8;79571;55534;Closed;1321
+9;58973;74273;OpenCover;59458
+10;77999;64121;OpenCover;73283
