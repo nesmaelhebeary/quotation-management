@@ -1,0 +1,99 @@
+entity RequestForQuotation {
+    id Long,
+    number String,
+    brokerId Long,
+    customerId Long,
+    createdDate LocalDate,
+    status RFQStatus,
+    createdBy String,
+    insuredNames String
+    additionalInsured String,
+    benificiaryName String,
+    policyType String,
+    effectiveDate LocalDate,
+    duration Integer,
+    numberOfMonth Integer,
+    additionalInfo String
+}
+
+entity RFQClaims {
+    id Long,
+    rfqId Long,
+    claimYear Long,
+    paidAmount Double,
+    outstandingAmount Double
+}
+
+entity RFQProducts{
+    id Long,
+    rfqId Long,
+    productId Long,
+    coverType CoverType,
+    sumInsured Double
+    }
+    
+    entity RFQProductsAttr{
+    id Long,
+    attributeName String,
+    attributeValue String
+    }
+    
+    entity RFQProductsSections{
+    id Long,
+    sectionName String,
+  sumInsured Double
+    }
+    
+    entity RFQSectionsItems{
+    id Long,
+  sumInsured Double,
+  name String,
+  currency String,
+  description String
+    }
+
+
+entity RFQDocuments {
+    id Long,
+    rfqId Long,
+    documentPath String,
+    documentName String,
+    uploadDate LocalDate
+}
+
+
+relationship OneToMany {
+ RequestForQuotation to RFQClaims 
+}
+
+relationship OneToMany {
+ RequestForQuotation to RFQDocuments 
+}
+
+relationship OneToMany {
+ RequestForQuotation to RFQProducts 
+}
+
+relationship OneToMany {
+ RFQProducts to RFQProductsAttr 
+}
+
+relationship OneToMany {
+RFQProducts to RFQProductsSections 
+}
+relationship OneToMany {
+ RFQProductsSections to  RFQSectionsItems
+}
+
+
+enum RFQStatus{
+New, Rejected, InProgress
+}
+
+enum CoverType{
+OpenCover, Closed
+}
+
+
+
+  
