@@ -1,0 +1,46 @@
+{
+  "name": "RFQClaims",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "claimYear",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "paidAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "outstandingAmount",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "rFQClaims",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "rfq_claims",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210329113549"
+}

@@ -1,0 +1,59 @@
+{
+  "name": "RFQProducts",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "coverType",
+      "fieldType": "CoverType",
+      "fieldValues": "OpenCover,Closed"
+    },
+    {
+      "fieldName": "sumInsured",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsAttr",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsAttr"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsSections",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsSections"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "rfq_products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210329113550"
+}

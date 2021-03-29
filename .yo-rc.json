@@ -40,7 +40,17 @@
     "pages": [],
     "creationTimestamp": 1617017393929,
     "jwtSecretKey": "NDcxZjYyMmRkZGQ4MWU5ODdiMGZiMGFlZGM0M2VkOTgwMWJlOTdmNTMyNDBlNGZiNDMyMjg0ODU5M2Y1ZDAzOGU1ZGE0MjU2YmUxZWIyNzdjZDJlYjMxYjAyNDM1MGRmZDY4MTNmY2I2MjY3NjQ1MGNiZjFjM2Y5N2ZjYWE5NWU=",
-    "reactive": false
+    "reactive": false,
+    "entities": [
+      "RequestForQuotation",
+      "RFQClaims",
+      "RFQProducts",
+      "RFQProductsAttr",
+      "RFQProductsSections",
+      "RFQSectionsItems",
+      "RFQDocuments"
+    ],
+    "lastLiquibaseTimestamp": 1617017754000
   },
   "git-provider": "GitHub",
   "git-company": "nesmaelhebeary",
