@@ -1,0 +1,99 @@
+entity RequestForQuotation {
+    id Long,
+    number String,
+    brokerId Long,
+    customerId Long,
+    createdDate Date,
+    status RFQStatus,
+    createdBy String,
+    insuredNames String
+    additionalInsured String,
+    benificiaryName String,
+    policyType String,
+    effectiveDate Date,
+    duration Integer,
+    numberOfMonth Integer,
+    additionalInfo String
+}
+
+entity RequestForQuotationClaims {
+    id Long,
+    rfqId Long,
+    claimYear Long,
+    paidAmount Double,
+    outstandingAmount Double
+}
+
+entity RequestForQuotationProducts{
+    id Long,
+    rfqId Long,
+    productId Long,
+    coverType CoverType,
+    sumInsured Double
+    }
+    
+    entity RequestForQuotationProductsAttr{
+    id Long,
+    attributeName String,
+    attributeValue String
+    }
+    
+    entity RequestForQuotationProductsSections{
+    id Long,
+    sectionName String,
+  sumInsured Double
+    }
+    
+    entity RequestForQuotationSectionsItems{
+    id Long,
+  sumInsured Double,
+  name String,
+  currency String,
+  description String
+    }
+
+
+entity RequestForQuotationDocuments {
+    id Long,
+    rfqId Long,
+    documentPath String,
+    documentName String,
+    uploadDate Date
+}
+
+
+relationship OneToMany {
+ RequestForQuotation to RequestForQuotationClaims 
+}
+
+relationship OneToMany {
+ RequestForQuotation to RequestForQuotationDocuments 
+}
+
+relationship OneToMany {
+ RequestForQuotation to RequestForQuotationProducts 
+}
+
+relationship OneToMany {
+ RequestForQuotationProducts to RequestForQuotationProductsAttr 
+}
+
+relationship OneToMany {
+ RequestForQuotationProducts to RequestForQuotationProductsSections 
+}
+relationship OneToMany {
+ RequestForQuotationProductsSections to  RequestForQuotationSectionsItems
+}
+
+
+enum RFQStatus{
+New, Rejected, InProgress
+}
+
+enum CoverType{
+OpenCover, Closed
+}
+
+
+
+  
