@@ -1,0 +1,68 @@
+{
+  "name": "RFQProductsItems",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "itemName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sumInsured",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsItemsDetails",
+      "otherEntityRelationshipName": "rFQProductsItems",
+      "relationshipName": "rFQProductsItemsDetails"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsItemsSections",
+      "otherEntityRelationshipName": "rFQProductsItems",
+      "relationshipName": "rFQProductsItemsSections"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsItemsValues",
+      "otherEntityRelationshipName": "rFQProductsItems",
+      "relationshipName": "rFQProductsItemsValues"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "rFQProductsItems",
+      "relationshipName": "rFQProducts"
+    }
+  ],
+  "entityTableName": "rfq_products_items",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153344"
+}

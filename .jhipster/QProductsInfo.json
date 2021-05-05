@@ -1,0 +1,56 @@
+{
+  "name": "QProductsInfo",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productAttrId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "attributeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attributeValue",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsInfoValueList",
+      "otherEntityRelationshipName": "qProductsInfo",
+      "relationshipName": "qProductsInfoValueList"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "quotation",
+      "otherEntityRelationshipName": "qProductsInfo",
+      "relationshipName": "quotation"
+    }
+  ],
+  "entityTableName": "q_products_info",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153359"
+}

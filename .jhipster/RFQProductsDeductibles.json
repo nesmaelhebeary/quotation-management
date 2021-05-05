@@ -1,0 +1,38 @@
+{
+  "name": "RFQProductsDeductibles",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "deductibleDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "rFQProductsDeductibles",
+      "relationshipName": "rFQProducts"
+    }
+  ],
+  "entityTableName": "rfq_products_deductibles",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153351"
+}

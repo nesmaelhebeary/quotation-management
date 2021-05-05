@@ -1,0 +1,54 @@
+{
+  "name": "RFQRequestedInfo",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "requestedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "requestDetails",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "replyDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "repliedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "replyDetails",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "rFQRequestedInfo",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "rfq_requested_info",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153339"
+}

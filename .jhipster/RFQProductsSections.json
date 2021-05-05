@@ -1,0 +1,58 @@
+{
+  "name": "RFQProductsSections",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sectionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sumInsured",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sectionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "turnOver",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "maxPerTime",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "rFQProductsSections",
+      "relationshipName": "rFQProducts"
+    }
+  ],
+  "entityTableName": "rfq_products_sections",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153349"
+}

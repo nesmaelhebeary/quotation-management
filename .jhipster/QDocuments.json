@@ -1,0 +1,46 @@
+{
+  "name": "QDocuments",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "documentPath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "uploadDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "quotation",
+      "otherEntityRelationshipName": "qDocuments",
+      "relationshipName": "quotation"
+    }
+  ],
+  "entityTableName": "q_documents",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153405"
+}

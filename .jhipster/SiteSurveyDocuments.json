@@ -1,0 +1,42 @@
+{
+  "name": "SiteSurveyDocuments",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "surveyId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "documentPath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "siteSurveyDetails",
+      "otherEntityRelationshipName": "siteSurveyDocuments",
+      "relationshipName": "siteSurveyDetails"
+    }
+  ],
+  "entityTableName": "site_survey_documents",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153357"
+}

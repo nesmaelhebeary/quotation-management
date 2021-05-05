@@ -1,0 +1,35 @@
+{
+  "name": "QuotationExtnesionDetails",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotaExtensionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "percentageItemId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "percentageItemValue",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "quotation_extnesion_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153355"
+}

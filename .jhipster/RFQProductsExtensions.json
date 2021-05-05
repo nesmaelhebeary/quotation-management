@@ -1,0 +1,42 @@
+{
+  "name": "RFQProductsExtensions",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "extensionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "extensionId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "rFQProductsExtensions",
+      "relationshipName": "rFQProducts"
+    }
+  ],
+  "entityTableName": "rfq_products_extensions",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153350"
+}

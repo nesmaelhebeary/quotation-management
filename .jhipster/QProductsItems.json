@@ -1,0 +1,66 @@
+{
+  "name": "QProductsItems",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "itemName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "itemDesc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sumInsured",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsItemsSections",
+      "otherEntityRelationshipName": "qProductsItems",
+      "relationshipName": "qProductsItemsSections"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsItemsValues",
+      "otherEntityRelationshipName": "qProductsItems",
+      "relationshipName": "qProductsItemsValues"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "qProducts",
+      "otherEntityRelationshipName": "qProductsItems",
+      "relationshipName": "qProducts"
+    }
+  ],
+  "entityTableName": "q_products_items",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153401"
+}
