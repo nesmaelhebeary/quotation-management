@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity SiteSurveyDocuments.
+    -->
+    <changeSet id="20210505153357-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="site_survey_details_id"
+                                 baseTableName="site_survey_documents"
+                                 constraintName="fk_site_survey_documents__site_survey_details_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="site_survey_details"/>
+    </changeSet>
+</databaseChangeLog>

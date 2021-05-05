@@ -1,0 +1,64 @@
+{
+  "name": "QuotationDistribution",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "distributionType",
+      "fieldType": "DistributionType",
+      "fieldValues": "Retension,QuotaShared,Surplus,AutoFac,Fac"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "percentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "rate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "premiums",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "commissionPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "taxPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "netPremiums",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "quotation_distribution",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153353"
+}

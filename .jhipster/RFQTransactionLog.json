@@ -1,0 +1,43 @@
+{
+  "name": "RFQTransactionLog",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "RFQAction",
+      "fieldValues": "Initiate,Reject,Review,RequestMoreDate"
+    },
+    {
+      "fieldName": "actionDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "rFQTransactionLog",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "rfq_transaction_log",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153340"
+}

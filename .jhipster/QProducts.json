@@ -1,0 +1,55 @@
+{
+  "name": "QProducts",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "coverType",
+      "fieldType": "CoverType",
+      "fieldValues": "OpenCover,Closed"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsItems",
+      "otherEntityRelationshipName": "qProducts",
+      "relationshipName": "qProductsItems"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsSections",
+      "otherEntityRelationshipName": "qProducts",
+      "relationshipName": "qProductsSections"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "quotation",
+      "otherEntityRelationshipName": "qProducts",
+      "relationshipName": "quotation"
+    }
+  ],
+  "entityTableName": "q_products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153358"
+}

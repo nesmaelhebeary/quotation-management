@@ -15,7 +15,58 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153338_added_entity_RequestForQuotation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153339_added_entity_RFQRequestedInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153340_added_entity_RFQTransactionLog.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153341_added_entity_RFQProducts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153342_added_entity_RFQProductsInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153343_added_entity_RFQProductsInfoValueList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153344_added_entity_RFQProductsItems.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153345_added_entity_RFQDocuments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153346_added_entity_RFQProductsItemsDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153347_added_entity_RFQProductsItemsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153348_added_entity_RFQProductsItemsValues.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153349_added_entity_RFQProductsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153350_added_entity_RFQProductsExtensions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153351_added_entity_RFQProductsDeductibles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153352_added_entity_Quotation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153353_added_entity_QuotationDistribution.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153354_added_entity_QuotationExtensions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153355_added_entity_QuotationExtnesionDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153356_added_entity_SiteSurveyDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153357_added_entity_SiteSurveyDocuments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153358_added_entity_QProducts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153359_added_entity_QProductsInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153400_added_entity_QProductsInfoValueList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153401_added_entity_QProductsItems.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153402_added_entity_QProductsItemsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153403_added_entity_QProductsItemsValues.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153404_added_entity_QProductsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153405_added_entity_QDocuments.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210505153339_added_entity_constraints_RFQRequestedInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153340_added_entity_constraints_RFQTransactionLog.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153341_added_entity_constraints_RFQProducts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153342_added_entity_constraints_RFQProductsInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153343_added_entity_constraints_RFQProductsInfoValueList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153344_added_entity_constraints_RFQProductsItems.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153345_added_entity_constraints_RFQDocuments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153346_added_entity_constraints_RFQProductsItemsDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153347_added_entity_constraints_RFQProductsItemsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153348_added_entity_constraints_RFQProductsItemsValues.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153349_added_entity_constraints_RFQProductsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153350_added_entity_constraints_RFQProductsExtensions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153351_added_entity_constraints_RFQProductsDeductibles.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153352_added_entity_constraints_Quotation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153357_added_entity_constraints_SiteSurveyDocuments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153358_added_entity_constraints_QProducts.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153359_added_entity_constraints_QProductsInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153400_added_entity_constraints_QProductsInfoValueList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153401_added_entity_constraints_QProductsItems.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153402_added_entity_constraints_QProductsItemsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153403_added_entity_constraints_QProductsItemsValues.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153404_added_entity_constraints_QProductsSections.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210505153405_added_entity_constraints_QDocuments.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

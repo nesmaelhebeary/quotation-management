@@ -1,0 +1,64 @@
+{
+  "name": "QuotationExtensions",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "extensionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "limit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "percentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "mplValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "extensionAr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extensionEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "exntensionPercentageType",
+      "fieldType": "ExntensionPercentageType",
+      "fieldValues": "TotalSumInsured,Section,Item"
+    },
+    {
+      "fieldName": "modified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "quotation_extensions",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153354"
+}

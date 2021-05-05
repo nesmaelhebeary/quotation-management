@@ -1,0 +1,145 @@
+{
+  "name": "RequestForQuotation",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brokerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "RFQStatus",
+      "fieldValues": "New,Rejected,InProgress"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "insuredNames",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "additionalInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "benificiaryName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "policyTypeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numberOfDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "additionalInfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mainteneacePeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "trialPeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "submissionDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "inceptionDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "deadLineDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "currentUser",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rejectionReason",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "quotation",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "quotation"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQTransactionLog",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQTransactionLog"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQRequestedInfo",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQRequestedInfo"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQDocuments",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQDocuments"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProducts",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQProducts"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsInfo",
+      "otherEntityRelationshipName": "requestForQuotation",
+      "relationshipName": "rFQProductsInfo"
+    }
+  ],
+  "entityTableName": "request_for_quotation",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153338"
+}

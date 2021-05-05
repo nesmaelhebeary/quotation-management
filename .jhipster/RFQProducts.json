@@ -1,0 +1,71 @@
+{
+  "name": "RFQProducts",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lineTypeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "coverType",
+      "fieldType": "CoverType",
+      "fieldValues": "OpenCover,Closed"
+    },
+    {
+      "fieldName": "categories",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsItems",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsItems"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsSections",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsSections"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsExtensions",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsExtensions"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "rFQProductsDeductibles",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "rFQProductsDeductibles"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "rFQProducts",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "rfq_products",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153341"
+}

@@ -1,0 +1,176 @@
+{
+  "name": "Quotation",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brokerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "QStatus",
+      "fieldValues": "New,Rejected,InProgress"
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "insuredNames",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "additionalInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "benificiaryName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "policyTypeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "effectiveDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numberOfDays",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "additionalInfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mainteneacePeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "trialPeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "underWriterName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expiryDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "totalSumInsured",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "totalMPL",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "averageRate",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "siteSurveyNeeded",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "hasExtension",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "rateOfExchangeUSD",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "rateOfExchangeEU",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "lineSettingsPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "natCatPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "axaShare",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "siteSurveyDetails",
+      "otherEntityRelationshipName": "quotation",
+      "relationshipName": "siteSurveyDetails",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qDocuments",
+      "otherEntityRelationshipName": "quotation",
+      "relationshipName": "qDocuments"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProducts",
+      "otherEntityRelationshipName": "quotation",
+      "relationshipName": "qProducts"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "qProductsInfo",
+      "otherEntityRelationshipName": "quotation",
+      "relationshipName": "qProductsInfo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "requestForQuotation",
+      "otherEntityRelationshipName": "quotation",
+      "relationshipName": "requestForQuotation"
+    }
+  ],
+  "entityTableName": "quotation",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153352"
+}

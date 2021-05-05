@@ -1,0 +1,65 @@
+{
+  "name": "SiteSurveyDetails",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "quotationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "requestedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "responseDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "naceCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataScoreSheetPath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "riskSurveyReportPath",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "siteSurveyDocuments",
+      "otherEntityRelationshipName": "siteSurveyDetails",
+      "relationshipName": "siteSurveyDocuments"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "quotation",
+      "otherEntityRelationshipName": "siteSurveyDetails",
+      "relationshipName": "quotation",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "site_survey_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "quoationMangement",
+  "clientRootFolder": "quoationMangement",
+  "databaseType": "sql",
+  "changelogDate": "20210505153356"
+}
